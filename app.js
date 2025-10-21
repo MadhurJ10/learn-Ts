@@ -30,3 +30,23 @@ var bottle = /** @class */ (function () {
 var b1 = new bottle(200, 100);
 var b2 = new bottle(1000, 10);
 console.log("nasjlnjf");
+//this keyword
+var thiss = /** @class */ (function () {
+    function thiss() {
+        this.name = "madhur";
+    }
+    thiss.prototype.getInfo = function () {
+        this.name = 'hehe';
+        console.log(this.name);
+    };
+    return thiss;
+}());
+// Generics 
+// Generics function
+function call(a) {
+}
+call('madhur');
+call(20);
+function abcd(obj) {
+}
+abcd({ name: "madhur", age: 20, key: 2103210 });
