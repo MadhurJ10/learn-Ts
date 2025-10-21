@@ -35,7 +35,7 @@ interface admin extends user {
     isAdmin: boolean
 }
 
-interface superAdmin extends admin { 
+interface superAdmin extends admin {
     isSuperadmin: boolean;
 }
 function check(obj: superAdmin) {
@@ -46,5 +46,27 @@ function check(obj: superAdmin) {
 
 type value = string | number;
 
-let val:value = 8;
-val = 'asn';  
+let val: value = 8;
+val = 'asn';
+
+
+// oops
+// class
+class bottle {
+
+    price: number
+    quantity: number
+
+    constructor(price: number, quantity: number) {
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+}
+
+let b1 = new bottle(200, 100);
+let b2 = new bottle(1000, 10);
+
+
+
+console.log("nasjlnjf")
