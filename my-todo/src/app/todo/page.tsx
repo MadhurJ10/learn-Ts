@@ -13,19 +13,13 @@ interface Todo {
 const Page = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
 
-  function submitt(text: string): void {
-    const newTodo = { id: Date.now(), msg: text , };
-    setTodos([...todos, newTodo]);
-    console.log([...todos, newTodo]);
-  }
+
 
   return (
     <div>
       <Todolist />
-      <Todoinput />
+      <Todoinput todos={todos} setTodos={setTodos} />
       
-      <button onClick={() => submitt('hehehehe')}>Add Todo</button>
-
       {/* Display todos */}
       {todos.map(({ id, msg }) => (
         <div key={id} className="my-2 p-2 border rounded">
